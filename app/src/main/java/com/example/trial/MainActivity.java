@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         t1.setOnClickListener(btnListener);
+        rb3.setOnClickListener(radioListener);
+        rb4.setOnClickListener(radioListener);
+
+
 
 
 
@@ -69,6 +73,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void radioListener(View view) {
+        Toast.makeText(getApplicationContext(), getResources().getResourceEntryName(view.getId()), Toast.LENGTH_SHORT).show();
+        boolean checked = ((RadioButton) view).isChecked();
+
+        if (checked) {
+            Toast.makeText(getApplicationContext(), ((RadioButton) view).getText(), Toast.LENGTH_SHORT).show();
+            Log.i("this","from xml function called "+((RadioButton) view).getText()+""+view.toString()+" "+getApplicationContext()+" "+this+" "+getBaseContext()+" "+getLocalClassName());
+
+
+        }
+    }
+
+    private View.OnClickListener radioListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), getResources().getResourceEntryName(v.getId()), Toast.LENGTH_SHORT).show();
+            boolean checked = ((RadioButton) v).isChecked();
+
+            if (checked) {
+                Toast.makeText(getApplicationContext(), ((RadioButton) v).getText(), Toast.LENGTH_SHORT).show();
+                Log.i("this","from named listener function called "+((RadioButton) v).getText()+""+v.toString()+" "+getApplicationContext()+" "+this+" "+getBaseContext()+" "+getLocalClassName());
+
+
+            }
+        }
+    };
 
 
     }

@@ -127,7 +127,9 @@
             android:layout_weight="0"
             android:drawableBottom="@android:color/holo_blue_dark"
             android:text="RadioButton1"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="radioListener"
+            />
 
         <RadioButton
             android:id="@+id/radioButton2"
@@ -135,7 +137,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton2"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:onClick="radioListener"
+            />
 
         <RadioButton
             android:id="@+id/radioButton3"
@@ -143,7 +147,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton3"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+
+
+            />
 
         <RadioButton
             android:id="@+id/radioButton4"
@@ -151,7 +158,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="RadioButton4"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+
+            />
     </RadioGroup>
 
     <Button
